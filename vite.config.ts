@@ -10,6 +10,16 @@ export default defineConfig(({ mode }) => {
         host: '0.0.0.0',
       },
       plugins: [react()],
+      build: {
+        rollupOptions: {
+          output: {
+            manualChunks: {
+              'recharts': ['recharts'],
+            }
+          }
+        },
+        chunkSizeWarningLimit: 600,
+      },
       resolve: {
         alias: {
           '@': path.resolve(__dirname, '.'),
