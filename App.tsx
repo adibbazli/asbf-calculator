@@ -44,7 +44,7 @@ const App: React.FC = () => {
       {/* Warning banner (light red) */}
       {showWarning && (
         <div className="bg-red-100 border border-red-500 text-red-800">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 pb-12 relative">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 relative">
             <button
               onClick={() => setShowWarning(false)}
               aria-label="Dismiss warning"
