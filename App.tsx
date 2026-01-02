@@ -66,7 +66,13 @@ const App: React.FC = () => {
           {/* Sidebar - Inputs */}
           <div className="lg:col-span-4 space-y-6">
             <InputSection inputs={inputs} setInputs={setInputs} />
-            
+
+            {/* Current Monthly Payment Display */}
+            <div className="bg-green-50 border border-green-300 rounded-xl p-5">
+              <p className="text-sm text-slate-600 mb-1">Current Monthly Payment</p>
+              <p className="text-2xl font-bold text-slate-900">{formatCurrency(lastResult.monthlyPayment)}</p>
+            </div>
+
             {/* ASB Dividend Record (inserted) */}
             <div className="bg-yellow-50 border border-yellow-100 rounded-xl p-5 text-sm text-yellow-900">
               <h4 className="font-semibold mb-2">ASB Dividend Record</h4>
